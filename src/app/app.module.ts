@@ -8,8 +8,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { fromRoot } from './store';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
-import { rootReducer ,metaReducers, reducers} from './store/reducers';
-
+import { metaReducers, reducers} from './store/reducers';
+import {AppRoutingModule} from './app-routing'
 @NgModule({
   declarations: [
     AppComponent
@@ -18,6 +18,7 @@ import { rootReducer ,metaReducers, reducers} from './store/reducers';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
     EffectsModule.forRoot([fromRoot.RootEffects]),
     StoreModule.forRoot(
       reducers,{metaReducers}

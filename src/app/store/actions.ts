@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-const DATA = '[Random] Get My Data';
+const DATA = 'Get My Data';
 
 export const DATA_ERROR_ACTION = '[Random]  Error';
  export const DATA_SUCCESS_ACTION = '[Random] Success';

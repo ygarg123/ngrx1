@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
   }
 
   getData() {
-    this.store.dispatch(
-      fromRoot.Data({ id: 'https://jsonplaceholder.typicode.com/users' })
-    );
+    // this.store.dispatch(
+    //   fromRoot.Data({ id: 'https://jsonplaceholder.typicode.com/users' })
+    // );
     // this.store
     //   .select(fromRoot.getStateSelectedData)
     //   .subscribe((res) => console.log(res));

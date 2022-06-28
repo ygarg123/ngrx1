@@ -1,4 +1,6 @@
 import { createReducer, on, ActionReducer, MetaReducer, ActionReducerMap } from '@ngrx/store';
+import { UserState ,initialUserState} from '../user1/user.reducer';
+import * as userReducer from '../user1/user.reducer';
 
 import { Data, ApiError, ApiSuccess, DATA_SUCCESS_ACTION } from './actions';
 const initialFeatureState: FeatureState = {
@@ -10,11 +12,13 @@ export interface FeatureState{
   selectedMockData: any[] | null;
 }
 export interface RootState {
-  featureState:FeatureState
+  featureState:FeatureState,
+  userState:UserState
   
 }
 const initialState: RootState = {
-  featureState:initialFeatureState
+  featureState:initialFeatureState,
+  userState:initialUserState
 };
 
 
@@ -55,4 +59,5 @@ export const metaReducers: MetaReducer<any>[] = [debug];
 
 export const reducers: ActionReducerMap<RootState> = {
   featureState: reducer,
+  userState:userReducer.reducer
    };
